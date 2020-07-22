@@ -4,7 +4,7 @@
   "description": "Calculá el precio final de tu juego de Steam en Argentina",
   "version": "1.0",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "/img/icon.png",
     "default_popup": "popup.html",
     "default_title": "A ver cuando te duele"
   }
