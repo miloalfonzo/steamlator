@@ -12,7 +12,7 @@ function calcular() {
   ).innerHTML = `El monto final a pagar es de: $ ${result} `);
   document.getElementById("numbResult").className = "";
 
-  if (element == "" || element == 0) {
+  if (element == "" || element <= 0) {
     document.getElementById("numbResult").innerHTML = "Ingrese un monto valido";
     document.getElementById("numbResult").className = "danger";
   }
