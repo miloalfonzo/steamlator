@@ -27,54 +27,30 @@
     <title>Steamlator</title>
   </head>
   <body>
-    <nav class="header mb-3">
-      <h1 class="text-center">Steamlator</h1>
-    </nav>
-
     <!-- <h3>A ver cuanto te duele el impuesto país</h3> -->
-    <form class="form-container m-auto text-center  col-md-6 rounded">
+    <form class="form-container m-auto text-center col-md-6 rounded">
       <label class="mt-3">
         Ingrese precio del juego:
       </label>
 
-      <div class="input-group col-lg-6 col-md-6 mb-3 ml-auto mr-auto">
+      <div class="input-group col-lg-6 col-md-12 mb-3 ml-auto mr-auto">
         <div class="input-group-prepend">
           <span class="input-group-text">$</span>
         </div>
-        <input type="number" class="form-control" id="price" />
+        <input type="text" class="form-control" id="element" />
       </div>
 
       <input
         type="button"
-        class="btn btn-secondary col-md-6 mb-3 "
-        onclick="calcular();"
+        id="calc"
+        class="btn btn-secondary col-md-6 mb-3"
         value="Calcular"
       />
 
-      <div id="result" style="visibility: hidden">
+      <div id="result" style="visibility: hidden;">
         <p id="numbResult"></p>
       </div>
     </form>
-    <script>
-      function calcular() {
-        let price = Number(document.getElementById("price").value);
-        let percent = (price * 29) / 100;
-        let result = price + percent;
-
-        let showTextResult = (document.getElementById(
-          "result"
-        ).style.visibility = "visible");
-        let showResult = (document.getElementById(
-          "numbResult"
-        ).innerHTML = ` El monto final a pagar es de: $ ${result} `);
-        document.getElementById("numbResult").className = "";
-
-        if (price == "" || price == 0) {
-          document.getElementById("numbResult").innerHTML =
-            "Ingrese un monto valido";
-          document.getElementById("numbResult").className = "danger";
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
