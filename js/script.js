@@ -9,7 +9,7 @@ function calcular() {
     "visible");
   let showResult = (document.getElementById(
     "numbResult"
-  ).innerHTML = `El monto final a pagar es de: $ ${result} `);
+  ).innerHTML = `El monto final a pagar es de: $${result} `);
   document.getElementById("numbResult").className = "";
 
   if (element == "" || element <= 0) {
